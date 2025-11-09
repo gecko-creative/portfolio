@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   const resourceLinks = [
-    { label: dict.footer.resourceLinks.rabbitTaleStudio, href: "https://rabbittale.co" },
+    { label: dict.footer.resourceLinks.gameStudio, href: "https://rabbittale.co" },
     { label: dict.footer.resourceLinks.blog, href: "https://blog.rabbittale.co" },
     { label: dict.footer.resourceLinks.sourceCode, href: "https://github.com/rabbit-tale-co/portfolio" },
   ];

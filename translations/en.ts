@@ -243,7 +243,7 @@ export interface TranslationDictionary {
       contact: string;
     };
     resourceLinks: {
-      rabbitTaleStudio: string;
+      gameStudio: string;
       blog: string;
       sourceCode: string;
     };
@@ -1039,8 +1039,8 @@ export const dict: TranslationDictionary = {
     },
     data: [
       {
-        company: "RabbitTale Studio",
-        position: "Co-Founder & Lead Director",
+        company: "Gecko Creative",
+        position: "Freelancer, coordination leader",
         type: "Full-time",
         startDate: "2023",
         endDate: "present",
@@ -1279,7 +1279,7 @@ export const dict: TranslationDictionary = {
         "Front-end developer with a passion for building accessible, performant, and visually engaging web apps. Experienced with React and modern tooling, focused on clean UI and thoughtful UX.",
       experience: [
         {
-          roleCompany: "Freelancer indie games • RabbitTale Studio",
+          roleCompany: "Freelancer indie games • Gecko Creative",
           period: "2023 — Present",
           location: "Gdańsk",
           bullets: [
@@ -1392,13 +1392,13 @@ export const dict: TranslationDictionary = {
       contact: "Contact"
     },
     resourceLinks: {
-      rabbitTaleStudio: "RabbitTale Studio",
+      gameStudio: "Gecko Creative",
       blog: "Blog",
       sourceCode: "Source Code"
     },
     copyright: {
       allRightsReserved: "All rights reserved",
-      madeBy: "Made by RabbitTale Studio"
+      madeBy: "Made by Kris German"
     }
   },
 };

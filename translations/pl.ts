@@ -429,8 +429,8 @@ export const dict: TranslationDictionary = {
     },
     data: [
       {
-        company: "RabbitTale Studio",
-        position: "Współzałożyciel i Dyrektor Generalny",
+        company: "Gecko Creative",
+        position: "Freelancer, Główny koordynator",
         type: "Pełny etat",
         startDate: "2023",
         endDate: "present",
@@ -651,7 +651,7 @@ export const dict: TranslationDictionary = {
         "Front-end developer z pasją do tworzenia dostępnych, wydajnych i atrakcyjnych wizualnie aplikacji webowych. Doświadczony w React i nowoczesnych narzędziach, skupiony na czystym UI i przemyślanym UX.",
       experience: [
         {
-          roleCompany: "Freelancer gier indie • RabbitTale Studio",
+          roleCompany: "Freelancer gier indie • Gecko Creative",
           period: "2023 — obecnie",
           location: "Gdańsk",
           bullets: [
@@ -753,13 +753,13 @@ export const dict: TranslationDictionary = {
       contact: "Kontakt"
     },
     resourceLinks: {
-      rabbitTaleStudio: "RabbitTale Studio",
+      gameStudio: "Gecko Creative",
       blog: "Blog",
       sourceCode: "Kod źródłowy"
     },
     copyright: {
       allRightsReserved: "Wszelkie prawa zastrzeżone",
-      madeBy: "Stworzone przez RabbitTale Studio"
+      madeBy: "Stworzone przez Kris German"
     }
   }
 };
