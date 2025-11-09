@@ -3,10 +3,10 @@ import { OutlineArrowRight } from "@/icons/Icons";
 import { useLanguage } from "@/app/providers/language-provider";
 
 const socialLinks = [
-  { platform: "GitHub", handle: "rabbit-tale-co", href: "https://github.com/rabbit-tale-co", icon: "GH" },
+  { platform: "GitHub", handle: "gecko-creative", href: "https://github.com/gecko-creative", icon: "GH" },
   { platform: "Twitter", handle: "@hasiradoo", href: "https://twitter.com/hasiradoo", icon: "TW" },
   { platform: "Discord", handle: "hasiradoo", href: "https://discord.com/users/569975072417251378", icon: "DC" },
-  { platform: "Patreon", handle: "rabbittale", href: "https://patreon.com/rabbittale", icon: "PA" },
+  // { platform: "Patreon", handle: "gecko_creative", href: "https://patreon.com/gecko_creative", icon: "PA" },
   { platform: "Bsky", handle: "@hasiradoo.rabbittale.co", href: "https://bsky.app/profile/hasiradoo.rabbittale.co", icon: "BS" },
   { platform: "Telegram", handle: "@hasiradoo", href: "https://t.me/hasiradoo", icon: "T" }
 ];
