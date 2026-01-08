@@ -3,6 +3,9 @@ import jarvvitch_large from '@/public/projects/Jarvvitch-large.png'
 import soundless_small from '@/public/projects/soundless-square.webp'
 import soundless_large from '@/public/projects/soundless-large.webp'
 
+export type ProjectStatus = 'inDevelopment' | 'completed' | 'archived' | 'concept' | 'onHold';
+export type ProjectCategory = 'games' | 'webApps' | 'desktop' | 'mobile' | 'websites' | 'mods';
+
 // Define the dictionary type
 export interface TranslationDictionary {
   common: {
@@ -137,28 +140,9 @@ export interface TranslationDictionary {
     noProjectsFound: string;
     filters: {
       all: string;
-      games: string;
-      webApps: string;
-      desktop: string;
-      mobile: string;
-      websites: string;
-      mods: string;
-    };
-    categories: {
-      webApps: string;
-      mobileGame: string;
-      horrorGame: string;
-      desktopApp: string;
-      webSite: string;
-      gameMod: string;
-    };
-    status: {
-      inDevelopment: string;
-      completed: string;
-      archived: string;
-      concept: string;
-      onHold: string;
-    };
+    } & Record<ProjectCategory, string>;
+    categories: Record<ProjectCategory, string>;
+    status: Record<ProjectStatus, string>;
     sections: {
       about: string;
       features: string;
@@ -182,15 +166,14 @@ export interface TranslationDictionary {
       slug: string;
       title: string;
       description: string;
-      category: string;
-      status: string[];
+      category: ProjectCategory[];
+      status: ProjectStatus[];
       technologies: string[];
       links?: Array<{
         name: string;
         url: string;
         description: string;
       }>;
-      type: string;
       thumbnail?: {
         square: {
           src: string;
@@ -719,11 +702,11 @@ export const dict: TranslationDictionary = {
     },
     categories: {
       webApps: "Web apps",
-      mobileGame: "Mobile Game",
-      horrorGame: "Horror Game",
-      desktopApp: "Desktop App",
-      webSite: "Web Site",
-      gameMod: "Game Mod"
+      mobile: "Mobile App",
+      games: "Game",
+      desktop: "Desktop App",
+      websites: "Web Site",
+      mods: "Game Mod"
     },
     status: {
       inDevelopment: "In Development",
@@ -753,10 +736,55 @@ export const dict: TranslationDictionary = {
     },
     data: [
       {
+        slug: "familiar-art",
+        title: "Familiar - Art marketplace",
+        description: "Modern and easy to navigate marketplace for artists all kind.",
+        category: ["webApps"],
+        status: ["inDevelopment", "concept"],
+        technologies: [
+          "TanStack",
+          "React",
+          "Tailwindcss",
+          "E-commerce",
+        ],
+        links: [
+          {
+            name: "Soon",
+            url: "#",
+            description: "soon",
+          },
+        ],
+        // thumbnail: {
+        //   square: {
+        //     src: zaczkie_large.src,
+        //     alt: "Zaczkie Art Portfolio Preview",
+        //     blur: zaczkie_large.src
+        //   },
+        //   large: {
+        //     src: zaczkie_large.src,
+        //     alt: "Zaczkie Art Portfolio Preview",
+        //     blur: zaczkie_large.src
+        //   }
+        // },
+        content: {
+          about: [
+            "Modern marketplace for artist of all kind.",
+          ],
+          features: [
+            "Soon",
+          ]
+        },
+        details: {
+          role: "UI/UX designer",
+          timeline: "1/1/2026 - Present",
+          platform: "Web"
+        }
+      },
+      {
         slug: "zaczkie-art",
         title: "Zaczkie Art",
         description: "Portfolio website for digital artist and illustrator",
-        category: "webSite",
+        category: ["websites"],
         status: ["completed"],
         technologies: [
           "Next.js",
@@ -772,7 +800,6 @@ export const dict: TranslationDictionary = {
             description: "Live portfolio website"
           }
         ],
-        type: "websites",
         thumbnail: {
           square: {
             src: zaczkie_large.src,
@@ -808,7 +835,7 @@ export const dict: TranslationDictionary = {
         slug: "jarvvitch-art",
         title: "Jarvvitch Art",
         description: "Portfolio website for digital artist",
-        category: "webSite",
+        category: ["websites"],
         status: ["completed"],
         technologies: [
           "Next.js",
@@ -824,7 +851,6 @@ export const dict: TranslationDictionary = {
             description: "Live portfolio website"
           }
         ],
-        type: "websites",
         thumbnail: {
           square: {
             src: jarvvitch_large.src,
@@ -860,8 +886,8 @@ export const dict: TranslationDictionary = {
         slug: "rabbit-hole-social",
         title: "Rabbit Hole",
         description: "Social portal for artists and clients",
-        category: "webApps",
-        status: ["in development"],
+        category: ["webApps"],
+        status: ["archived"],
         technologies: [
           "Next.js (App Router)",
           "Tailwind CSS v4",
@@ -886,7 +912,6 @@ export const dict: TranslationDictionary = {
             description: "Database and authentication provider"
           }
         ],
-        type: "webApps",
         // thumbnail: {
         //   square: {
         //     src: portfolio_small.src,
@@ -922,7 +947,7 @@ export const dict: TranslationDictionary = {
         },
         details: {
           role: "Full-Stack Developer",
-          timeline: `${new Date().getFullYear()} - Present`,
+          timeline: `9/20/2024 - 12/6/2026`,
           platform: "Web Application"
         }
       },
@@ -930,8 +955,8 @@ export const dict: TranslationDictionary = {
         slug: "soundless",
         title: "SoundLess",
         description: "An innovative horror game where players navigate through darkness using echolocation mechanics and sound-based gameplay.",
-        category: "horrorGame",
-        status: ["in development", "concept"],
+        category: ["games", "desktop"],
+        status: ["onHold", "concept"],
         technologies: [
           "Godot",
           "GDScript",
@@ -950,7 +975,6 @@ export const dict: TranslationDictionary = {
             description: "Read the companion comic"
           }
         ],
-        type: "games",
         thumbnail: {
           square: {
             src: soundless_small.src,
@@ -989,10 +1013,9 @@ export const dict: TranslationDictionary = {
         slug: "tinybuddies",
         title: "TinyBuddies",
         description: "A cute virtual pet game where players can adopt, raise, and play with adorable creatures.",
-        category: "mobileGame",
-        status: ["in development", "archived"],
+        category: ["games", "mobile"],
+        status: ["onHold", "archived"],
         technologies: ["Godot", "GDScript", "Game Design"],
-        type: "games",
         // thumbnail: {
         //   square: {
         //     src: tinybuddies_small.src,

@@ -65,8 +65,8 @@ export function ProjectCard({ project, variant, thumbnailType = "square" }: Proj
                   blurDataURL={project.thumbnail[thumbnailType].blur}
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-gray-400 dark:text-gray-600 font-mono">
+                <div className="w-full h-full flex items-center justify-center p-4">
+                  <span className="text-gray-400 dark:text-gray-600 font-mono text-center">
                     {project.title}
                   </span>
                 </div>

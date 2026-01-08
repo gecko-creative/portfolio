@@ -81,7 +81,7 @@ function getMockPatreonData(): PatreonData {
 export async function fetchPatreonSupporters(): Promise<PatreonData> {
   // Check for Patreon access token in environment
   const accessToken = process.env.PATREON_ACCESS_TOKEN;
-  
+
   if (!accessToken) {
     console.log('No Patreon access token found, returning empty supporters data');
     return { supporters: [] };
@@ -91,7 +91,7 @@ export async function fetchPatreonSupporters(): Promise<PatreonData> {
     // In production, this would make actual API calls to:
     // https://api.patreon.com/oauth2/v2/campaigns/{campaign_id}/members
     // ?include=currently_entitled_tiers&fields[tier]=title,amount_cents,description&fields[member]=email,full_name,image_url,lifetime_support_cents,pledge_relationship_start,patron_status
-    
+
     console.log('Patreon API integration not yet implemented, returning empty supporters data');
     return { supporters: [] };
   } catch (error) {

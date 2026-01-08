@@ -17,10 +17,23 @@ export default function ProjectsPage() {
       return new Date();
     }
 
-    // Extract the first date from the timeline string (e.g., "03/12/2024 - Present" -> "03/12/2024")
-    const dateMatch = timeline.match(/(\d{1,2}\/\d{1,2}\/\d{4}|\d{4})/);
-    if (dateMatch) {
-      return new Date(dateMatch[0]);
+    // Try to match DD.MM.YYYY (Polish format)
+    const plDateMatch = timeline.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
+    if (plDateMatch) {
+      const [_, day, month, year] = plDateMatch;
+      return new Date(Number(year), Number(month) - 1, Number(day));
+    }
+
+    // Try to match MM/DD/YYYY (English format)
+    const enDateMatch = timeline.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+    if (enDateMatch) {
+      return new Date(enDateMatch[0]);
+    }
+
+    // Fallback for just year
+    const yearMatch = timeline.match(/(\d{4})/);
+    if (yearMatch) {
+      return new Date(yearMatch[0]);
     }
 
     // Default to current date if no valid date found
@@ -31,7 +44,9 @@ export default function ProjectsPage() {
   const filteredProjects = dict.projects.data
     .filter((project) => {
       if (activeFilter === "all") return true;
-      return project.type === activeFilter;
+      return Array.isArray(project.category)
+        ? project.category.includes(activeFilter as any)
+        : project.category === activeFilter;
     });
 
   // Sort projects by date (newest first)

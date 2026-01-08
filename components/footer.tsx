@@ -10,12 +10,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { label: dict.footer.socialLinks.github, href: "https://github.com/rabbit-tale-co", icon: "GH" },
+    { label: dict.footer.socialLinks.github, href: "https://github.com/gecko-creative", icon: "GH" },
     { label: dict.footer.socialLinks.twitter, href: "https://twitter.com/hasiradoo", icon: "TW" },
     { label: dict.footer.socialLinks.bsky, href: "https://bsky.app/profile/hasiradoo.rabbittale.co", icon: "BS" },
-    { label: dict.footer.socialLinks.patreon, href: "https://patreon.com/rabbittale", icon: "PA" },
+    { label: dict.footer.socialLinks.patreon, href: "https://patreon.com/gecko_creative", icon: "PA" },
     { label: dict.footer.socialLinks.discord, href: "https://discord.com/users/569975072417251378", icon: "DC" },
-    { label: dict.footer.socialLinks.telegram, href: "https://t.me/rabbit_tale", icon: "TG" },
+    { label: dict.footer.socialLinks.telegram, href: "https://t.me/gecko_creative", icon: "TG" },
   ];
 
   const navigationLinks = [
@@ -28,9 +28,9 @@ export default function Footer() {
   ];
 
   const resourceLinks = [
-    { label: dict.footer.resourceLinks.gameStudio, href: "https://rabbittale.co" },
-    { label: dict.footer.resourceLinks.blog, href: "https://blog.rabbittale.co" },
-    { label: dict.footer.resourceLinks.sourceCode, href: "https://github.com/rabbit-tale-co/portfolio" },
+    { label: dict.footer.resourceLinks.gameStudio, href: "https://gecko-creative.games" },
+    // { label: dict.footer.resourceLinks.blog, href: "https://blog.rabbittale.co" },
+    { label: dict.footer.resourceLinks.sourceCode, href: "https://github.com/gecko-creative/portfolio" },
   ];
 
   const LinkWithArrow = ({ href, label, isExternal = false }: { href: string; label: string; icon?: string; isExternal?: boolean }) => (

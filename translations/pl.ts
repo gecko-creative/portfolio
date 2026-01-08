@@ -250,11 +250,11 @@ export const dict: TranslationDictionary = {
     },
     categories: {
       webApps: "Aplikacje web",
-      mobileGame: "Gra mobilna",
-      horrorGame: "Gra horror",
-      desktopApp: "Aplikacja desktopowa",
-      webSite: "Strona WWW",
-      gameMod: "Mod do gry"
+      mobile: "Aplikacje na Telefony",
+      games: "Gry",
+      desktop: "Aplikacje na Komputery",
+      websites: "Strony WWW",
+      mods: "Mody"
     },
     status: {
       inDevelopment: "W trakcie rozwoju",
@@ -284,14 +284,58 @@ export const dict: TranslationDictionary = {
     },
     data: [
       {
+        slug: "familiar-art",
+        title: "Familiar - Targowisko sztuki",
+        description: "Nowoczesne i łatwe w nawigacji targowisko dla artystów wszelkiego rodzaju.",
+        category: ["webApps"],
+        status: ["inDevelopment", "concept"],
+        technologies: [
+          "TanStack",
+          "React",
+          "Tailwindcss",
+          "E-commerce",
+        ],
+        links: [
+          {
+            name: "Wkrótce",
+            url: "#",
+            description: "wkrótce",
+          },
+        ],
+        thumbnail: {
+          square: {
+            src: zaczkie_large.src,
+            alt: "Podgląd portfolio Zaczkie Art",
+            blur: zaczkie_large.src
+          },
+          large: {
+            src: zaczkie_large.src,
+            alt: "Podgląd portfolio Zaczkie Art",
+            blur: zaczkie_large.src
+          }
+        },
+        content: {
+          about: [
+            "Nowoczesne targowisko dla artystów wszelkiego rodzaju.",
+          ],
+          features: [
+            "Wkrótce",
+          ]
+        },
+        details: {
+          role: "Projektant UI/UX",
+          timeline: "01.01.2026",
+          platform: "Web"
+        }
+      },
+      {
         slug: "zaczkie-art",
         title: "Zaczkie Art",
         description: "Portfolio dla artysty cyfrowego i ilustratora",
-        category: "webSite",
+        category: ["websites"],
         status: ["completed"],
         technologies: ["Next.js", "React", "CSS", "Responsive Design", "Gallery System"],
         links: [{name: "Strona", url: "https://zaczkie.art", description: "Portfolio online"}],
-        type: "websites",
         thumbnail: {
           square: {
             src: zaczkie_large.src,
@@ -314,11 +358,10 @@ export const dict: TranslationDictionary = {
         slug: "jarvvitch-art",
         title: "Jarvvitch Art",
         description: "Portfolio dla artysty cyfrowego",
-        category: "webSite",
+        category: ["websites"],
         status: ["completed"],
         technologies: ["Next.js", "React", "Tailwind CSS", "Responsive Design", "Image Optimization"],
         links: [{name: "Strona", url: "https://www.jarvvitch.art/", description: "Portfolio online"}],
-        type: "websites",
         thumbnail: {
           square: {
             src: jarvvitch_large.src,
@@ -341,11 +384,10 @@ export const dict: TranslationDictionary = {
         slug: "rabbit-hole-social",
         title: "Rabbit Hole",
         description: "Portal społecznościowy dla artystów i klientów",
-        category: "webApps",
+        category: ["webApps"],
         status: ["inDevelopment"],
         technologies: ["Next.js (App Router)", "Tailwind CSS v4", "shadcn/ui", "Zod v4", "Supabase Auth"],
         links: [{name: "Dokumentacja Next.js", url: "https://nextjs.org/docs", description: "Framework napędzający Rabbit Hole"}],
-        type: "webApps",
         // thumbnail: {
         //   square: {
         //     src: portfolio_small.src,
@@ -368,11 +410,10 @@ export const dict: TranslationDictionary = {
         slug: "soundless",
         title: "SoundLess",
         description: "Innowacyjna gra horror, w której gracze poruszają się w ciemności, korzystając z mechaniki echolokacji.",
-        category: "horrorGame",
+        category: ["games", "desktop"],
         status: ["inDevelopment", "concept"],
         technologies: ["Godot", "GDScript", "Projektowanie dźwięku", "Programowanie shaderów"],
         links: [{name: "Dodaj do listy życzeń na Steam", url: "https://store.steampowered.com", description: "Dodaj naszą grę do listy życzeń już teraz!"}],
-        type: "games",
         thumbnail: {
           square: {
             src: soundless_small.src,
@@ -395,10 +436,9 @@ export const dict: TranslationDictionary = {
         slug: "tinybuddies",
         title: "TinyBuddies",
         description: "Urocza gra mobilna inspirowana Tamagotchi, w której gracze opiekują się wirtualnymi zwierzakami.",
-        category: "mobileGame",
+        category: ["games", "mobile"],
         status: ["inDevelopment", "archived"],
         technologies: ["Godot", "GDScript", "Projektowanie gier"],
-        type: "games",
         // thumbnail: {
         //   square: {
         //     src: tinybuddies_small.src,
