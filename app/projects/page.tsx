@@ -20,7 +20,7 @@ export default function ProjectsPage() {
     // Try to match DD.MM.YYYY (Polish format)
     const plDateMatch = timeline.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);
     if (plDateMatch) {
-      const [_, day, month, year] = plDateMatch;
+      const [, day, month, year] = plDateMatch;
       return new Date(Number(year), Number(month) - 1, Number(day));
     }
 
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
     .filter((project) => {
       if (activeFilter === "all") return true;
       return Array.isArray(project.category)
-        ? project.category.includes(activeFilter as any)
+        ? (project.category as string[]).includes(activeFilter)
         : project.category === activeFilter;
     });
 

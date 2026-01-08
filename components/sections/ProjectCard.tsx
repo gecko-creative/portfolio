@@ -8,7 +8,7 @@ interface Project {
   slug: string;
   title: string;
   description: string;
-  category: string;
+  category: string[];
   status: string[];
   technologies: string[];
   links?: Array<{
@@ -16,7 +16,6 @@ interface Project {
     url: string;
     description?: string;
   }>;
-  type: string;
   thumbnail?: {
     square?: {
       src: string;
@@ -85,7 +84,11 @@ export function ProjectCard({ project, variant, thumbnailType = "square" }: Proj
                 />
               </div>
               <div className="flex flex-wrap items-center gap-2 mb-4">
-                <Badge variant="secondary">{project.category}</Badge>
+                {project.category.map((cat) => (
+                  <Badge key={cat} variant="secondary">
+                    {cat}
+                  </Badge>
+                ))}
                 <div className="flex flex-wrap gap-2 items-center">
                   {project.status.map((status: string, index: number) => (
                     <Badge key={index} variant={getStatusVariant(status)}>
@@ -126,7 +129,11 @@ export function ProjectCard({ project, variant, thumbnailType = "square" }: Proj
               />
             </div>
             <div className="flex flex-wrap items-center gap-2 mb-2">
-              <Badge variant="secondary">{project.category}</Badge>
+              {project.category.map((cat) => (
+                <Badge key={cat} variant="secondary">
+                  {cat}
+                </Badge>
+              ))}
               <div className="flex flex-wrap gap-2 items-center">
                 {project.status.map((status: string, index: number) => (
                   <Badge key={index} variant={getStatusVariant(status)}>
