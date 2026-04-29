@@ -7,13 +7,13 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
 import { useLanguage } from "@/app/providers/language-provider";
+import { SolidLogoGecko } from "@/icons/assets/logo/logo_gecko";
+import { SolidLogoTextGecko } from "@/icons/assets/logo/logo_text_gecko";
 
 const navigationLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
-  { href: "/patrons", label: "Patrons" },
   { href: "/prices", label: "Prices" },
   { href: "/contact", label: "Contact" },
 ];
@@ -94,12 +94,13 @@ export default function Header() {
                       "flex items-center gap-3 transition-all duration-200",
                     )}
                   >
-                    <div className="size-10 sm:size-8 bg-foreground text-background flex items-center justify-center">
+                    <SolidLogoTextGecko size={40} />
+                    {/* <div className="size-10 sm:size-8 bg-foreground text-background flex items-center justify-center">
                       <SolidLogo size={20} />
-                    </div>
-                    <span className="font-mono font-bold text-gray-900 dark:text-gray-100 text-sm uppercase tracking-wider">
+                    </div> */}
+                    {/* <span className="font-mono font-bold text-gray-900 dark:text-gray-100 text-sm uppercase tracking-wider">
                       {dict.common.siteName}
-                    </span>
+                    </span> */}
                   </Link>
                 </>
               )}

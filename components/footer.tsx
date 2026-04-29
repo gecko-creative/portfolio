@@ -4,6 +4,7 @@ import Link from "next/link";
 import { OutlineArrowRight, SolidLogo } from "@/icons/Icons";
 import { SectionSeparator } from "./sections/SectionSeparator";
 import { useLanguage } from "@/app/providers/language-provider";
+import { SolidLogoTextGecko } from "@/icons/assets/logo/logo_text_gecko";
 
 export default function Footer() {
   const { dict } = useLanguage();
@@ -22,7 +23,6 @@ export default function Footer() {
     { label: dict.footer.navigationLinks.home, href: "/" },
     { label: dict.footer.navigationLinks.about, href: "/about" },
     { label: dict.footer.navigationLinks.projects, href: "/projects" },
-    { label: dict.footer.navigationLinks.experience, href: "/experience" },
     { label: dict.footer.navigationLinks.patrons, href: "/patrons" },
     { label: dict.footer.navigationLinks.contact, href: "/contact" },
   ];
@@ -65,9 +65,7 @@ export default function Footer() {
               {/* Logo and info */}
               <div className="w-full md:w-auto space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="size-8 bg-foreground text-background flex items-center justify-center">
-                    <SolidLogo size={20} />
-                  </div>
+                    <SolidLogoTextGecko size={64} />
                   <span className="font-mono font-bold text-gray-900 dark:text-gray-100 text-sm uppercase tracking-wider">
                     {dict.footer.personalInfo.name}
                   </span>

@@ -6,6 +6,7 @@ import { SectionSeparator } from "@/components/sections/SectionSeparator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { calculateAge, calculateExperience } from "@/lib/utils";
 import { useLanguage } from "@/app/providers/language-provider";
+import { ExperienceTimeline } from "@/components/sections/Experience";
 
 const startYear = 2016;
 
@@ -124,6 +125,24 @@ export default function About() {
             </div>
           ))}
         </div>
+      </section>
+
+      <SectionSeparator />
+
+      {/* Experience */}
+      <section id="experience">
+        <div className="border-l-4 border-black dark:border-white mb-3 pl-4">
+          <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-2">
+            {dict.experience.title}
+          </h1>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            {dict.experience.subtitle}
+          </p>
+        </div>
+
+        <SectionSeparator />
+
+        <ExperienceTimeline experiences={dict.experience.data} showDetails={true} />
       </section>
 
       <SectionSeparator />

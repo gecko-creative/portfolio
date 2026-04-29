@@ -738,8 +738,8 @@ export const dict: TranslationDictionary = {
       {
         slug: "familiar-art",
         title: "Familiar - Art marketplace",
-        description: "Modern and easy to navigate marketplace for artists all kind.",
-        category: ["webApps"],
+        description: "Modern and easy tool for artist of all kind.",
+        category: ["webApps", "mobile"],
         status: ["inDevelopment", "concept"],
         technologies: [
           "TanStack",
@@ -1260,10 +1260,10 @@ export const dict: TranslationDictionary = {
       name: "Krystian German",
       tagline: "Front-End Developer • UI/UX Enthusiast",
       contact: {
-        email: "kris@rabbittale.co",
+        email: "kris@hasira.me",
         phone: "+48 123 456 789",
         location: "Gdańsk, Poland",
-        website: "kris.rabbittale.co",
+        website: "hasira.me",
         labels: {
           email: "Email:",
           phone: "Phone:",
@@ -1358,7 +1358,7 @@ export const dict: TranslationDictionary = {
       title: "Other Ways to Reach Me",
       email: {
         title: "Email",
-        value: "kris@rabbittale.co",
+        value: "kris@hasira.me",
         description: "Best for business inquiries"
       },
       discord: {
@@ -1378,7 +1378,7 @@ export const dict: TranslationDictionary = {
       },
       bsky: {
         title: "Bsky",
-        value: "@hasiradoo.rabbittale.co‬",
+        value: "@hasira.me",
         description: "Follow my journey"
       }
     },

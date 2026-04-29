@@ -54,7 +54,7 @@ type PageParams = {
 export default function ProjectPage({ params }: PageParams) {
   const { dict } = useLanguage();
   const { slug } = use(params);
-  const project = dict?.projects?.data?.find((p: Project) => p.slug === slug);
+  const project = dict?.projects?.data?.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
@@ -167,9 +167,13 @@ export default function ProjectPage({ params }: PageParams) {
               <div>
                 <dt className="text-xs font-medium text-gray-500 dark:text-gray-500 uppercase tracking-wider">{dict?.projects?.sections?.category || "Category"}</dt>
                 <dd className="mt-1">
-                  <Badge variant="secondary">
-                    {(dict?.projects?.categories as Record<string, string>)?.[project.category] || project.category}
-                  </Badge>
+                  <div className="flex flex-wrap gap-2">
+                    {project.category.map((category) => (
+                      <Badge key={category} variant="secondary">
+                        {(dict?.projects?.categories as Record<string, string>)?.[category] || category}
+                      </Badge>
+                    ))}
+                  </div>
                 </dd>
               </div>
               <div>

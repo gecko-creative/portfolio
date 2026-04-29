@@ -4,11 +4,11 @@ import { Locale } from "@/translations/i18n"
 
 // Define ProjectStatus enum directly since we no longer import from data.ts
 enum ProjectStatus {
-  InDevelopment = "In Development",
+  InDevelopment = "InDevelopment",
   Completed = "Completed",
   Archived = "Archived",
   Concept = "Concept",
-  OnHold = "On Hold"
+  OnHold = "OnHold"
 }
 
 export function cn(...inputs: ClassValue[]) {

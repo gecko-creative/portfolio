@@ -286,8 +286,8 @@ export const dict: TranslationDictionary = {
       {
         slug: "familiar-art",
         title: "Familiar - Targowisko sztuki",
-        description: "Nowoczesne i łatwe w nawigacji targowisko dla artystów wszelkiego rodzaju.",
-        category: ["webApps"],
+        description: "Nowoczesne i łatowe narzędzie dla artystów wszelkiego rodzaju.",
+        category: ["webApps", "mobile"],
         status: ["inDevelopment", "concept"],
         technologies: [
           "TanStack",
@@ -606,7 +606,7 @@ export const dict: TranslationDictionary = {
       title: "Inne sposoby kontaktu",
       email: {
         title: "Email",
-        value: "kris@rabbittale.co",
+        value: "kris@hasira.me",
         description: "Najlepszy dla zapytań biznesowych"
       },
       discord: {
@@ -626,7 +626,7 @@ export const dict: TranslationDictionary = {
       },
       bsky: {
         title: "Bsky",
-        value: "@hasiradoo.rabbittale.co‬",
+        value: "@hasira.me",
         description: "Śledź moją podróż"
       }
     },
@@ -649,10 +649,10 @@ export const dict: TranslationDictionary = {
       name: "Krystian German",
       tagline: "Front-End Developer • Entuzjasta UI/UX",
       contact: {
-        email: "kris@rabbittale.co",
+        email: "kris@hasira.me",
         phone: "+48 123 456 789",
         location: "Gdańsk, Polska",
-        website: "kris.rabbittale.co",
+        website: "hasira.me",
         labels: {
           email: "Email:",
           phone: "Telefon:",

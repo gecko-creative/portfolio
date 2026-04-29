@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import type { SVGProps } from 'react'
 
 /**
@@ -13,3 +14,11 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 	className?: string
 	size?: number
 }
+
+/**
+ * Helper function to merge default icon classes with provided className
+ * Automatically includes flex-shrink-0 to prevent icon shrinking
+ */
+export const getIconClassName = (className?: string): string => {
+	return cn("flex-shrink-0", className);
+};
